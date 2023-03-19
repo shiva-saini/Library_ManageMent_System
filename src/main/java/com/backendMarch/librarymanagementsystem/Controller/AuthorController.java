@@ -12,7 +12,7 @@ import java.util.List;
 public class AuthorController {
     @Autowired
     AuthorService authorService;
-    @PostMapping("/add")
+    @PostMapping("/add") // change it to dtos
     public String addAuthor(@RequestBody Author author){
         authorService.addAuthor(author);
         return "Author added";
