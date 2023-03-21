@@ -41,6 +41,6 @@ public class LibraryCard {
     @OneToMany(mappedBy = "card",cascade = CascadeType.ALL)
     List<Transaction> transactions = new ArrayList<>();
 
-    @OneToMany(mappedBy = "card",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "card",cascade = CascadeType.ALL) // books that have been issued on this card
     List<Book> books = new ArrayList<>();
 }

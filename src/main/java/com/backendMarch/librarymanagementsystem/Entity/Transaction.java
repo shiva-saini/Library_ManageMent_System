@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -26,9 +27,10 @@ public class Transaction {
     TransactionStatus transactionStatus;
 
     private boolean isIssuedOperation; // true - student ko di h // false - student ne return ki h
-    @CreatedDate
+    @CreationTimestamp
     private Date transactionDate;
 
+    private String message;
     @ManyToOne
     @JoinColumn
     Book book;
